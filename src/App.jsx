@@ -11,6 +11,7 @@ import {
   selectAllSources,
   selectTaxPeriods,
   setOffices,
+  setOffice,
   setSources,
   setTaxPeriod,
   setSearch,
@@ -208,9 +209,10 @@ export default function App() {
         sources={sources}
         taxPeriods={taxPeriods}
         filters={filters}
-        onToggleOffice={toggleOffice}
-        onSelectAllOffices={handleSelectAllOffices}
-        onClearOffices={clearOffices}
+        onSelectOffice={(value) => dispatch(setOffice(value))}
+        // onToggleOffice={toggleOffice}
+        // onSelectAllOffices={handleSelectAllOffices}
+        // onClearOffices={clearOffices}
         onToggleSource={toggleSource}
         onTaxPeriod={(v) => dispatch(setTaxPeriod(v))}
         onSearch={(v) => dispatch(setSearch(v))}
